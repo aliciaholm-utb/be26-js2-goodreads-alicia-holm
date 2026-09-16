@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Goodreads</title>
+  </head>
+  <body>
+    <header>
+      <h1>GoodReads</h1>
+    </header>
+    <main>
+      <form>
+        <input type="text" placeholder="Bok titel" id="titelInput" />
+        <input type="text" placeholder="Författare" id="authorInput" />
+        <input type="checkbox" id="readBox" />
+        <label for="readBox">Läst</label>
+        <button type="submit" id="addButton" class="btn btn-primary">
+          Lägg till
+        </button>
+      </form>
+
+      <h2>TBR-lista</h2>
+      <ul id="tbrList"></ul>
+
+      <h2>Mina lästa böcker</h2>
+      <ul id="myBooksList"></ul>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
