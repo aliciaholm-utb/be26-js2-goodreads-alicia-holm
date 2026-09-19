@@ -7,12 +7,93 @@ export function createBookCard(newBook) {
   titleText.textContent = newBook.title;
   const authorText = document.createElement("p");
   authorText.textContent = newBook.author;
+  const readButton = document.createElement("button");
+  const ratingContainer = document.createElement("div");
 
-  liItem.append(titleText, authorText);
+  const starArray = [];
 
-  if (newBook.isRead) {
+
+function updateRatingdisplay(){
+  starArray.forEach((ratingStarsButtons, index) => {
+ if(index +1 <= newBook.score){
+      ratingStarsButtons.textContent = "★"
+    } else {
+      ratingStarsButtons.textContent = "☆"
+    }
+
+  })
+}
+
+    for(let i= 1; i<=5; i++){
+    const ratingStarsButtons = document.createElement("button");
+   
+
+    starArray.push(ratingStarsButtons);
+
+    ratingContainer.appendChild(ratingStarsButtons);
+
+    ratingStarsButtons.addEventListener("click", async() => {
+      try{
+
+    await newBook.updateScore(i)
+      updateRatingdisplay();  }
+      catch(error){
+        console.log(error);
+      }
+    })
+  }
+        updateRatingdisplay();
+
+  
+  function isReadDisplay(){
+    if(newBook.isRead){
+    readButton.textContent = "Markera som oläst"
+    ratingContainer.style.display = "flex";
+  } else {
+    readButton.textContent = "Markera som läst"
+    ratingContainer.style.display = "none";
+  }
+if (newBook.isRead) {
     myBooksList.appendChild(liItem);
   } else {
     tbrList.appendChild(liItem);
   }
+
+  }
+
+  isReadDisplay();
+  
+
+  readButton.addEventListener("click", async () =>{
+    try{
+    await newBook.updateIsRead();
+isReadDisplay();
+  updateRatingdisplay();  
+    }
+    catch(error){
+      console.log(error);
+    }
+    
+
+
+  })
+
+const deleteButton = document.createElement("button");
+deleteButton.textContent = "Ta Bort";
+
+deleteButton.addEventListener("click", async () => {
+try{
+await newBook.deleteBook();
+liItem.remove();
+}
+catch(error){
+  console.log(error);
+}
+})
+  
+
+    liItem.append(titleText, authorText, readButton, ratingContainer, deleteButton);
+
+
+  
 }

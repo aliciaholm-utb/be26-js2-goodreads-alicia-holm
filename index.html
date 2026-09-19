@@ -12,20 +12,37 @@
     </header>
     <main>
       <form id="form">
-        <input type="text" placeholder="Bok titel" id="titleInput" />
-        <input type="text" placeholder="Författare" id="authorInput" />
-        <input type="checkbox" id="readBox" />
-        <label for="readBox">Läst</label>
-        <button type="submit" id="addButton" class="btn btn-primary">
+        <input
+          type="text"
+          required
+          placeholder="Bok titel"
+          id="titleInput"
+          class="bookInput"
+        />
+        <input
+          type="text"
+          required
+          placeholder="Författare"
+          id="authorInput"
+          class="bookInput"
+        />
+        <div class="checkboxContainer">
+          <input type="checkbox" id="readBox" class="checkboxContainer" />
+          <label for="readBox" class="checkboxContainer"
+            >Jag har läst boken</label
+          >
+        </div>
+
+        <button type="submit" id="addButton" class="buttonPrimary">
           Lägg till
         </button>
       </form>
 
       <h2>TBR-lista</h2>
-      <ul id="tbrList"></ul>
+      <ul id="tbrList" class="bookList"></ul>
 
       <h2>Mina lästa böcker</h2>
-      <ul id="myBooksList"></ul>
+      <ul id="myBooksList" class="bookList"></ul>
     </main>
 
     <script type="module" src="/src/main.js"></script>
