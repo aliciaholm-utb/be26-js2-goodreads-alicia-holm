@@ -57,7 +57,7 @@ form.addEventListener("submit", async (event) => {
   };
   try{
   const data = await addBook(newBook);
-
+form.reset();
   const book = new Book(data.name, title, author, isRead, undefined);
 
   createBookCard(book);

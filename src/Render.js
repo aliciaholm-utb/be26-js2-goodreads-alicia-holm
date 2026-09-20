@@ -3,13 +3,18 @@ const myBooksList = document.querySelector("#myBooksList");
 
 export function createBookCard(newBook) {
   const liItem = document.createElement("li");
+  liItem.classList.add("bookCard");
   const titleText = document.createElement("h3");
+  titleText.classList.add("bookTitle");
   titleText.textContent = newBook.title;
   const authorText = document.createElement("p");
+  authorText.classList.add("bookAuthor");
   authorText.textContent = newBook.author;
   const readButton = document.createElement("button");
+  readButton.classList.add("readButton");
   const ratingContainer = document.createElement("div");
-
+const bookControls = document.createElement("div");
+bookControls.classList.add("bookControls");
   const starArray = [];
 
 
@@ -26,7 +31,7 @@ function updateRatingdisplay(){
 
     for(let i= 1; i<=5; i++){
     const ratingStarsButtons = document.createElement("button");
-   
+   ratingStarsButtons.classList.add("ratingStar");
 
     starArray.push(ratingStarsButtons);
 
@@ -79,6 +84,7 @@ isReadDisplay();
   })
 
 const deleteButton = document.createElement("button");
+deleteButton.classList.add("deleteButton");
 deleteButton.textContent = "Ta Bort";
 
 deleteButton.addEventListener("click", async () => {
@@ -91,8 +97,8 @@ catch(error){
 }
 })
   
-
-    liItem.append(titleText, authorText, readButton, ratingContainer, deleteButton);
+bookControls.append(ratingContainer, readButton, deleteButton);
+    liItem.append(titleText, authorText, bookControls);
 
 
   
