@@ -1,151 +1,146 @@
-main{
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px;
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px;
 }
 
-body{
-    background-color: rgb(245, 245, 220);
+body {
+  background-color: rgb(245, 245, 220);
 }
 
-h1{
-    text-align: center;
-    font-size: 40px;
-    color:  rgb(47, 93, 58);
-    margin-bottom: 10px;
-    margin-top: 10px;
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(47, 93, 58);
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-form{
-    background-color: rgb(255, 253, 245);
-    border-radius: 15px;
-    padding: 35px;
-    max-width: 350px;
-    margin: auto;
+form {
+  background-color: rgb(255, 253, 245);
+  border-radius: 15px;
+  padding: 35px;
+  max-width: 350px;
+  margin: auto;
 }
 
-.bookInput{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border: 1px solid rgb(190, 200, 180);
+.bookInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(190, 200, 180);
 }
 
-.checkboxContainer{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 15px 0 20px 0;
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0 20px 0;
 }
 
-.checkboxContainer input{
-    width: 22px;
-    height: 22px;
+.checkboxContainer input {
+  width: 22px;
+  height: 22px;
 }
 
-.buttonPrimary{
-    background-color: rgb(47, 93, 58);
-    color: white;
-    border: 1px solid rgb(38, 76, 47);
-    border-radius: 8px;
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    cursor: pointer;
+.buttonPrimary {
+  background-color: rgb(47, 93, 58);
+  color: white;
+  border: 1px solid rgb(38, 76, 47);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.buttonPrimary:hover{
-    background-color: rgb(38, 76, 47);
+.buttonPrimary:hover {
+  background-color: rgb(38, 76, 47);
 }
 
-.bookList{
-list-style: none;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 15px;
-padding: 0;
+.bookList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0;
 }
 
-.bookCard{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 253, 245);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgb(190, 200, 180);
-    height: 300px;
-    
-
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 253, 245);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(190, 200, 180);
+  height: 300px;
 }
 
-.bookTitle{
-font-size: 24px;
-font-weight: bolder;
-color: rgb(47, 93, 58);
-margin-bottom: 5px;
-text-align: center;
-
+.bookTitle {
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(47, 93, 58);
+  margin-bottom: 5px;
+  text-align: center;
 }
 
-.bookAuthor{
-    font-size: 16px;
-    color: rgb(80, 80, 70);
-    margin-bottom: 10px;
-text-align: center;
+.bookAuthor {
+  font-size: 16px;
+  color: rgb(80, 80, 70);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.bookControls{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top:auto;
+.bookControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
 }
 
-.ratingStar{
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor:pointer;
-    padding: 5px;
-    color: rgb(218, 165, 32);
-    transition: 0.2s;
+.ratingStar {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 5px;
+  color: rgb(218, 165, 32);
+  transition: 0.2s;
 }
 
-.ratingStar:hover{
-    transform: scale(1.2);
-    color: rgb(184, 134, 11);
-
+.ratingStar:hover {
+  transform: scale(1.2);
+  color: rgb(184, 134, 11);
 }
 
-.readButton{
-    background-color: rgb(47, 93, 58);
-    color:white;
-    border-radius: 8px;
-    border: 1px solid rgb(38, 76, 47);
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
+.readButton {
+  background-color: rgb(47, 93, 58);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgb(38, 76, 47);
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
 }
 
-.readButton:hover{
-background-color:rgb(38, 76, 47) ;    
+.readButton:hover {
+  background-color: rgb(38, 76, 47);
 }
 
-.deleteButton{
-    background-color: rgb(252, 235, 235);
-    color: rgb(150, 55, 55);
-    border: 1px solid rgb(205, 120, 120);
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 8px;
-
+.deleteButton {
+  background-color: rgb(252, 235, 235);
+  color: rgb(150, 55, 55);
+  border: 1px solid rgb(205, 120, 120);
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
 }
 
-.deleteButton:hover{
-    background-color: rgb(150, 55, 55);
-    color: white;
+.deleteButton:hover {
+  background-color: rgb(150, 55, 55);
+  color: white;
 }
