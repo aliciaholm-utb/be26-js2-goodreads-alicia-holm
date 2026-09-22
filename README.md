@@ -74,7 +74,7 @@ npm run dev
 
 ## Live demo
 
-Netlify: [LÄNK TILL APPEN]
+Netlify: https://goodreads-alicia-holm.netlify.app
 
 ## GitHub
 
